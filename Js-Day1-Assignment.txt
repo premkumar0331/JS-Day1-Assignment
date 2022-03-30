@@ -1,0 +1,65 @@
+		JS_Assignment_Day-1
+==============================================================
+
+Q2. Write a blog on Difference between HTTP1.1 vs HTTP2;
+
+        HTTP/1.1                                                        HTTP/2.0
+1. Response time is slow                       ----    Response time is fast(because can handle more data at one request)
+2. It is less Secure.                          ----    It is secure by default.
+3. It don't compress the Headers               ----    It compress the Headers.
+4. It doesn't have a server  push option.      ----    It has a server push which sends the mandatory files with a single request of file.
+5. keeps all requests and responses in plain   ----    It uses the binary framing layer to encapsulate
+   text format                                         all messages in binary format.
+6. HTTP/1.1 Browsers use 1 TCP connection      ----    HTTP/2 uses 1 TCP  with stream IDs for multiplexing  
+   for one request and response                        requests and responses.     
+
+
+Q3. Write a blog about objects and its internal representation in Javascript;
+
+Ans: an object allows to store collection of data.
+	
+	An objects can be created mainly in 2 ways :
+
+	1. object literal; let user = {};  // "object literal" syntax
+	
+	Ex; const person = {
+	firstname:"prem",
+	lastname:"Kumar",
+	age:"30",
+	place:"Hyderabad",
+	}
+
+	2. object constructor; let user = new Object(); // "object constructor" syntax;
+
+	Ex; const person = new Object();
+	person.firstname:"prem";
+	person.lastname:"Kumar";
+	person.age:"30";
+	person.place:"Hyderabad";
+	
+
+the data in the objects are called properties which is represented in Key:value pair;
+
+the value of the keys in the object can be accessed throught the "objectname.keyname";
+from above Ex; console.log(person.firstname); //Op: prem;
+
+
+function inside the objects are called the methods.
+
+const person = {
+	firstname:"prem",
+	lastname:"Kumar",
+	age:"30",
+	place:"Hyderabad",
+	details: function(){
+		return (`${this.firstname} ${this.lastname}`);
+		}	
+	}
+console.log(person.details()); //ouput : prem Kumar
+
+here 'details' is called method as it is associated with the function and can be called with "()" beside the method name.
+
+
+
+
+
